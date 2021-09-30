@@ -1,0 +1,2 @@
+#! /bin/bash
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --use_env train.py --dataroot ./datasets/cmdd --dataset_mode tbrec_cmdd --model tbrec --batch_size 2 --name cmdd_overall --lr 0.00005 --max_dataset_size 372 --niter 5 --niter_decay 45 --print_freq 31 --save_epoch_freq 101 --save_latest_freq 372 --num_rows 25 --num_cols 6 --continue_train --epoch prt --rm_layers row_cls,col_cls

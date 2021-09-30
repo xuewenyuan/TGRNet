@@ -1,0 +1,2 @@
+#! /bin/bash
+CUDA_VISIBLE_DEVICES=2 python -m torch.distributed.launch --nproc_per_node=1 --master_port 2351 --use_env train.py --dataroot ./datasets/tablegraph24k --dataset_mode tbrec_tablegraph24k --model tbrec --batch_size 2 --lr 0.0001 --name tablegraph24k_overall --max_dataset_size 20000 --niter 5 --niter_decay 45 --print_freq 1000 --save_epoch_freq 101 --save_latest_freq 20000 --num_rows 38 --num_cols 22 --continue_train --epoch prt --rm_layers row_cls,col_cls

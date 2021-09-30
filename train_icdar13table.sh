@@ -1,0 +1,2 @@
+#! /bin/bash
+CUDA_VISIBLE_DEVICES=2 python -m torch.distributed.launch --nproc_per_node=1 --use_env train.py --dataroot ./datasets/icdar13table --dataset_mode tbrec_icdar13table --model tbrec --batch_size 2 --name icdar13table_overall --lr 0.00005 --max_dataset_size 78 --niter 10 --niter_decay 90 --print_freq 26 --save_epoch_freq 101 --save_latest_freq 78 --num_rows 58 --num_cols 13 --continue_train --epoch prt --rm_layers row_cls,col_cls

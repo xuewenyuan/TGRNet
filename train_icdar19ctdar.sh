@@ -1,0 +1,2 @@
+#! /bin/bash
+CUDA_VISIBLE_DEVICES=2 python -m torch.distributed.launch --nproc_per_node=1 --master_port 2351 --use_env train.py --dataroot ./datasets/icdar19_ctdar --dataset_mode tbrec_icdar19ctdar_lloc --model tbrec_llocpre --batch_size 1 --name icdar19_lloc --lr 0.0001 --max_dataset_size 676 --niter 5 --niter_decay 95 --print_freq 338 --save_epoch_freq 101 --save_latest_freq 3380 --num_rows 88 --num_cols 44 --load_height 800 --load_width 800 --continue_train --epoch prt --rm_layers row_cls,col_cls
