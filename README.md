@@ -59,7 +59,7 @@ tar -zxvf datasets.tar.gz
 ```
 
 ## Pretrained Models Preparation
-#IMPORTANT# Acoording to [feedbacks](https://github.com/xuewenyuan/TGRNet/issues/2) from users (I also tested by myself), the pretrained models may not work for any enviroments. I have tested the following enviroment that can work as expected.
+**IMPORTANT** Acoording to [feedbacks](https://github.com/xuewenyuan/TGRNet/issues/2) from users (I also tested by myself), the pretrained models may not work for any enviroments. I have tested the following enviroment that can work as expected.
 ```
   - CUDA 9.2
   - torch 1.7.0+torchvision 0.8.0
