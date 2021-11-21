@@ -59,6 +59,17 @@ tar -zxvf datasets.tar.gz
 ```
 
 ## Pretrained Models Preparation
+#IMPORTANT# Acoording to [feedbacks](https://github.com/xuewenyuan/TGRNet/issues/2) from users (I also tested by myself), the pretrained models may not work for any enviroments. I have tested the following enviroment that can work as expected.
+```
+  - CUDA 9.2
+  - torch 1.7.0+torchvision 0.8.0
+  - torch-cluster 1.5.9
+  - torch-geometric 1.6.3
+  - torch-scatter 2.0.6
+  - torch-sparse 0.6.9
+  - torch-spline-conv 1.2.1
+```
+
 - Download pretrained models from [Google Dive](https://drive.google.com/file/d/1qjFGdph3Y_s9sio9ngk6wQEAWduuneIm/view?usp=sharing) or [Alibaba Cloud](https://wenyuancloud.oss-cn-beijing.aliyuncs.com/data/cvpr/checkpoints.tar.gz).
 - Put checkpoints.tar.gz in "./checkpoints/" and extract it.
 ```
